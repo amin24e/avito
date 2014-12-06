@@ -13,5 +13,14 @@ BOT_NAME = 'avito'
 SPIDER_MODULES = ['avito.spiders']
 NEWSPIDER_MODULE = 'avito.spiders'
 
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "avito"
+MONGODB_COLLECTION = "service"
+
+ITEM_PIPELINES = {
+  'avito.pipelines.MongoDBPipeline',
+}
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'avito (+http://www.yourdomain.com)'
